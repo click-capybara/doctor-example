@@ -279,6 +279,42 @@
     .photo-grid{ grid-template-columns: 1fr; }
   }
 
+  .booking-hint{
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+  .booking-hint a{ color: var(--blue); font-weight: 600; text-decoration: none; }
+  .booking-hint a:hover{ text-decoration: underline; }
+
+  .cta-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-top: 56px;
+    padding: 30px 32px;
+    background: var(--offwhite);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .cta-card:hover{ border-color: var(--blue); background: var(--white); }
+  .cta-card h3{ color: var(--blue-deep); font-size: 1.1rem; margin-bottom: 6px; }
+  .cta-card p{ color: var(--ink-soft); font-size: 0.92rem; max-width: 48ch; margin: 0; }
+  .cta-arrow{
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    color: var(--blue);
+    font-size: 0.92rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  @media (max-width: 640px){
+    .cta-card{ flex-direction: column; align-items: flex-start; gap: 14px; }
+  }
+
   .demo-flag{
     display: inline-block;
     margin-top: 16px;
@@ -607,6 +643,7 @@
       <div class="demo-flag">Vorschau — noch nicht mit dem echten Praxiskalender verbunden</div>
     </div>
     <div id="booking" class="reveal"></div>
+    <p class="booking-hint reveal">Keinen Termin, sondern nur eine Frage? <a href="kontaktformular.html">Zum Kontaktformular →</a></p>
   </div>
 </section>
 
@@ -644,6 +681,16 @@
         </iframe>
       </div>
     </div>
+  </div>
+
+  <div class="wrap">
+    <a href="kontaktformular.html" class="cta-card reveal">
+      <div>
+        <h3>Allgemeine Frage?</h3>
+        <p>Kein dringendes Anliegen, sondern eine Frage zu Rezepten, Befunden oder Sonstigem? Nutzen Sie das Kontaktformular — unabhängig von Sprechzeiten und Telefon.</p>
+      </div>
+      <span class="cta-arrow">Zum Kontaktformular →</span>
+    </a>
   </div>
 </section>
 
